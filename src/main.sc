@@ -19,7 +19,7 @@ theme: /
         a: Я не понял. Перефразируйте.
     
     state: SuggestHelp
-        q: отмена
+        q: отмена || fromState = /AskPhone
         a: Я помогу Вам купить билет на самолет. ОК?
         buttons:
             "Да" -> /SuggestHelp/Accepted
@@ -36,7 +36,7 @@ theme: /
             q: * (нет/не) *
             a: Боюсь, что на этом мои полномочия как бы все)
 
-     state: AskPhone || modal=true
-         a: Для продолжения нужен номер телефона.
-         buttons:
-             "Отмена"
+    state: AskPhone || modal=true
+        a: Для продолжения нужен номер телефона.
+        buttons:
+            "Отмена"
