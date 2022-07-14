@@ -33,20 +33,6 @@
       "text" : "привет"
     } ],
     "priority" : 0
-  }, {
-    "id" : 11213724,
-    "path" : "/собака",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "собака"
-    }, {
-      "text" : "пес"
-    }, {
-      "text" : "пёс"
-    } ],
-    "patterns" : [ ],
-    "priority" : 0
   } ],
   "entities" : [ ],
   "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
