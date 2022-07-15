@@ -9,6 +9,18 @@ theme: /
         q!: $regex</start>
         q!: *start
         q!: $hi
+        # выводим картинку, для этого включаем тег js
+        script:
+        # если респонс реплайс отсутствует, то создаем новый массив
+            $response.replies = $response.replies || [];
+        # добавляем 
+            $response.replies.push({
+                type: "image",
+                imageUrl: "https://clck.ru/sJ2bT",
+                text: "махалка рукой"
+                })
+        
+        # выводит приветствие и отправяет в стейт помощи
         random:
             a: Привет. 
             a: Здравствую.
