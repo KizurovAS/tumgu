@@ -43,16 +43,74 @@
       "text" : "купить билет"
     }, {
       "text" : "хочу билет"
+    }, {
+      "text" : "вылет из @откуда в @куда @когда"
     } ],
     "patterns" : [ " ~билет" ],
+    "slots" : [ {
+      "name" : "departure",
+      "entity" : "departure",
+      "required" : true,
+      "prompts" : [ "откуда летим?" ]
+    }, {
+      "name" : "destination",
+      "entity" : "destination",
+      "required" : true,
+      "prompts" : [ "куда летим?" ]
+    }, {
+      "name" : "date",
+      "entity" : "duckling.date",
+      "required" : true,
+      "prompts" : [ ]
+    } ],
     "priority" : 0
   } ],
-  "entities" : [ ],
-  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
+  "entities" : [ {
+    "entity" : {
+      "id" : 160217,
+      "name" : "departure",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false
+    },
+    "records" : [ {
+      "id" : 13586467,
+      "type" : "pattern",
+      "rule" : [ "город" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "id" : 160214,
+      "name" : "destination",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false
+    },
+    "records" : [ {
+      "id" : 13586466,
+      "type" : "pattern",
+      "rule" : [ "город" ],
+      "value" : ""
+    } ]
+  } ],
+  "enabledSystemEntities" : [ "mystem.geo", "duckling.number", "duckling.time", "duckling.date", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
   "spellerDictionary" : [ ],
   "systemEntities" : [ {
     "name" : "mystem.geo",
-    "enabled" : false
+    "enabled" : true
   }, {
     "name" : "mystem.persn",
     "enabled" : false
@@ -118,7 +176,7 @@
   }, {
     "name" : "duckling.date",
     "version" : "v2",
-    "enabled" : false
+    "enabled" : true
   }, {
     "name" : "duckling.time-of-day",
     "version" : "v2",
