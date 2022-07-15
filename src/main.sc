@@ -12,7 +12,7 @@ theme: /
         random:
             a: Привет. 
             a: Здравствую.
-        # go!: /SuggestHelp   
+        go!: /SuggestHelp   
 
     state: CatchAll || noContext = true
         event!: noMatch
