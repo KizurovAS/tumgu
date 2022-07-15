@@ -6,6 +6,12 @@ require: phoneNumber/phoneNumber.sc
 
 require: localPatterns.sc
 
+init:
+    bind("postProcess", function($context) {
+       // log("@@@@@@ " + toPrettyString($context))
+        $context.session.lastState = $context.currentState;
+        })
+
 theme: /
 
     state: Welcome
@@ -27,13 +33,15 @@ theme: /
         random:
             a: Привет. 
             a: Здравствую.
-        a: Меня зовут {{$injector.botName}}
+        # a: Меня зовут {{$injector.botName}}
+        a: Меня зовут {{capitalize($injector.botName)}}
         go!: /SuggestHelp   
 
 # переходим в другой стейт при этом сохраняем контекст
     state: CatchAll || noContext = true
         event!: noMatch
         a: Я не понял. Перефразируйте.
+        go!: {{$session.lastState}}
     
     state: SuggestHelp
         q: отмена || fromState = /AskPhone

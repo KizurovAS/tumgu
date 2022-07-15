@@ -6,7 +6,7 @@ botEngine: v2
 language: ru
 
 injector:
-  botName: Валерия
+  botName: валерия
 
 tests:
   include:
