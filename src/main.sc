@@ -119,3 +119,8 @@ theme: /
             var discount = "Купите билет сегодня и получите скидку 10% на следующую покупку!"
             $reactions.answer(ansverText);
             $reactions.answer(discount);
+            
+    state: Direction
+        intent!: /direction
+        a: Хочешь купить билет?
+        go!: /SuggestHelp/Accepted

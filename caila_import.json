@@ -33,6 +33,19 @@
       "text" : "привет"
     } ],
     "priority" : 0
+  }, {
+    "id" : 11236727,
+    "path" : "/direction",
+    "description" : "желание купить билет",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "купить билет"
+    }, {
+      "text" : "хочу билет"
+    } ],
+    "patterns" : [ " ~билет" ],
+    "priority" : 0
   } ],
   "entities" : [ ],
   "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
