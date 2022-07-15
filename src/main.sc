@@ -36,7 +36,8 @@ theme: /
             q: * (нет/не) *
             a: Боюсь, что на этом мои полномочия как бы все)
 
-    state: AskPhone || modal=true
+    state: AskPhone 
+        # || modal=true
         a: Для продолжения нужен номер телефона.
         buttons:
             "Отмена"
