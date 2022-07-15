@@ -20,6 +20,8 @@ theme: /
         q!: $hi
         # выводим картинку, для этого включаем тег js
         script:
+        # открываем новую сессию
+            $jsapi.startSession();
         # если респонс реплайс отсутствует, то создаем новый массив
             $response.replies = $response.replies || [];
         # добавляем 
@@ -102,8 +104,18 @@ theme: /
             script:
                 $client.phone=$session.probablyPhone;
                 delete $session.probablyPhone
-            a: Отлично
+            # a: Отлично
+            go!: /Discount
                 
         state: Disagree
             q: (нет/неверно)
             go!: /AskPhone
+            
+    state: Discount
+        script:
+            # возьмем дату из втроенного сервиса
+            var nowDate = $jsapi.dateForZone("Europe/Moscow", "dd.MM");
+            var ansverText = "Сегодня (" + nowDate + ") действует акция!"
+            var discount = "Купите билет сегодня и получите скидку 10% на следующую покупку!"
+            $reactions.answer(ansverText);
+            $reactions.answer(discount);
