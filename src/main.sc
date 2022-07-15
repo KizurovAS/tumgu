@@ -67,6 +67,7 @@ theme: /
             # распарсим второй строкой и запилим переменную в темп первой строкой, смотреть лог в http://json.parser.online.fr/
             script:
                 $temp.phone = $parseTree._mobilePhoneNumber
+                # распарсим лог js
                 # log("@@@@@@ " + toPrettyString($parseTree));
             go!: /Confirm
         
