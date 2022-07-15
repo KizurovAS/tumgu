@@ -14,6 +14,7 @@ theme: /
             a: Здравствую.
         go!: /SuggestHelp   
 
+# переходим в другой стейт при этом сохраняем контекст
     state: CatchAll || noContext = true
         event!: noMatch
         a: Я не понял. Перефразируйте.
@@ -36,7 +37,7 @@ theme: /
             q: * (нет/не) *
             a: Боюсь, что на этом мои полномочия как бы все)
 
-    state: AskPhone 
+    state: AskPhone
         # || modal=true
         a: Для продолжения нужен номер телефона.
         buttons:
